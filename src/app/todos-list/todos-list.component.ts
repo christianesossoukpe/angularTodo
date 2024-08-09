@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SuppressionService } from '../service/suppression.service';
 
 @Component({
   selector: 'app-todos-list',
@@ -7,9 +8,6 @@ import { Component } from '@angular/core';
 })
 export class TodosListComponent {
   
-//  const  tasks: =  [
-//     { name: "Piquer des bananes au super marché.", status: "to-do" },
-//     { name: "Manger 1kg de chocolat en 1 heure.", status: "in progress" }
-//   ]
+constructor(private supprimer:SuppressionService){}
 
 }
