@@ -24,5 +24,7 @@ export class TodoFormComponent {
       status: 'En cours',
     };
     this.TodosService.addTodo(todo);
+    this.FormTodo.reset();
+    
   }
 }

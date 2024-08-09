@@ -14,7 +14,9 @@ todos:Todos[] = todos
     }
 
     addTodo(todo:Todos): void{
+      
       this.todos.push(todo);
+  
     }
 
 }
