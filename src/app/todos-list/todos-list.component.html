@@ -26,12 +26,12 @@
           </td>
           <td>
             <div  class="text-center">
-              <button type="button" class="fa fa-trash pointer">Supprimer</button>
+              <button (click)="removTask(i)" type="button" class="fa fa-trash pointer">Supprimer</button>
             </div>
           </td>
           <td>
             <div  class="text-center">
-              <button class="fa fa-trash pointer">Modifier</button>
+              <button (click)="updatTask(i)" class="fa fa-trash pointer">Modifier</button>
             </div>
           </td>
         </tr>

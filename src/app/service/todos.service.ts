@@ -19,4 +19,13 @@ todos:Todos[] = todos
   
     }
 
+    deleteTodo(index:number): void{
+      // this.todos.filter((todo) => todo.id !== id)
+      this.todos.splice(index,1)
+    }
+    
+    editeTodo(id:number): void {
+      this.todos.map((todo) => todo.id === id)
+    }
+
 }

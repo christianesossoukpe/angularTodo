@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { TodosService } from '../service/todos.service';
 import { Todos } from '../todos';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-todo-form',
@@ -11,9 +11,9 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class TodoFormComponent {
   todos!: Todos[];
   FormTodo = new FormGroup({
-    id: new FormControl(''),
-   task: new FormControl(''),
-    status: new FormControl(''),
+    id: new FormControl('', [Validators.required]),
+   task: new FormControl('', [Validators.required]),
+    status: new FormControl('', [Validators.required]),
   });
 
   constructor(private TodosService: TodosService) {}
@@ -21,10 +21,11 @@ export class TodoFormComponent {
     const todo: Todos = {
       id:Date.now(),
       task: this.FormTodo.value.task || "",
-      status: 'En cours',
+      status:this.FormTodo.value.task || "",
     };
     this.TodosService.addTodo(todo);
     this.FormTodo.reset();
     
   }
+
 }
