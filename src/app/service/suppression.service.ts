@@ -9,10 +9,10 @@ export class SuppressionService {
  confirmation:string ="Voulez-vous vraiment supprimer cette tâche ?";
   constructor() {}
 
-  deleteTodo(todoId:number){
+  // deleteTodo(todoId:number){
   
-    if (this.confirmation) {
-       return this.todo.splice(todoId, 1); 
-      }
-    }
+  //   if (this.confirmation) {
+  //      return this.todo.splice(todoId, 1); 
+  //     }
+  //   }
 }

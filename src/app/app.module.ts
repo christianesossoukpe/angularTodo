@@ -12,13 +12,17 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     FormComponentComponent,
-    TodosListComponent
+    TodosListComponent,
+    TodoFormComponent
+
+    
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
   ],
   providers: [
     provideClientHydration()

@@ -5,5 +5,5 @@ export const todos:Array<Todos> =  [
     { id:2, task: "Manger 1kg de chocolat en 1 heure.", status: "En cours" },
     { id:3, task: "Passer en alternance.", status: "En cours" },
     { id:4, task: "Quiz HTML.", status: "Effectuer" },
-    { id:4, task: "Quiz CSS.", status: "Effectuer" },
+    { id:5, task: "Quiz CSS.", status: "Effectuer" },
   ]
