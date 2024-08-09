@@ -20,7 +20,9 @@ export class TodosService {
   }
 
  edite(): void {
-  this.todos.map((todo))
+  this.todos.map((el)=>{
+    this.el.id === id ? (                                                                                                                                                                                                                                                                                  el,task) :el
+  })
  }
 
 }
