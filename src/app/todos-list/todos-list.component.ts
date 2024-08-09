@@ -1,15 +1,20 @@
-import { Component } from '@angular/core';
+import { TodosService } from '../service/todos.service';
+import { todos } from './../../mocks-todos';
+import { Todos } from './../todos';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-todos-list',
   templateUrl: './todos-list.component.html',
-  styleUrl: './todos-list.component.css'
+  styleUrl: './todos-list.component.css',
 })
-export class TodosListComponent {
+export class TodosListComponent implements OnInit {
+  todos!: Todos[];
+
   
-//  const  tasks: =  [
-//     { name: "Piquer des bananes au super marché.", status: "to-do" },
-//     { name: "Manger 1kg de chocolat en 1 heure.", status: "in progress" }
-//   ]
+  constructor(private TodosService: TodosService) {}
+  ngOnInit(): void {
+    this.todos = this.TodosService.getTodos();
+  }
 
 }

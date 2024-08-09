@@ -2,16 +2,12 @@
 <div class="container">
     <h2 class="text-center mt-5">Todo App</h2>
 
-    <!-- Input -->
-    <!-- <div class="d-flex">
-      <input v-model="task" type="text" placeholder="Enter task" class="form-control">
-      <button  class="btn btn-warning rounded-0">Ajouter</button>
-    </div> -->
+    
 
     <!-- Task table -->
     <table class="table table-bordered">
       <thead>
-        <tr>
+        <tr >
           <th scope="col">id</th>
           <th scope="col">Task</th>
           <th scope="col">Status</th>
@@ -20,16 +16,16 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr *ngFor="let todo of todos; let i = index">
           <td>
-            <span ></span>
+            <span >{{i + 1 }}</span>
             </td>
           <td style="width: 120px">
-            <span></span>
+            <span>{{ todo.task }}</span>
           </td>
           <td>
             <div>
-              <span class="fa fa-pen pointer"></span>
+              <span class="fa fa-pen pointer">{{ todo.status }}</span>
             </div>
           </td>
           <td>
