@@ -30,9 +30,26 @@
             </div>
           </td>
           <td>
-            <div  class="text-center">
+            <!-- <div  class="text-center">
               <button (click)="updatTask(i)" class="fa fa-trash pointer">Modifier</button>
+            </div> -->
+            <div *ngIf="!isEditing" class="text-center">
+              <button (click)="startEditing()" class="fa fa-trash pointer">Modifier</button>
             </div>
+            <div *ngIf="isEditing">
+  <label>
+    task:
+    <input  />
+  </label>
+  <br />
+  <label>
+    status:
+    <input  />
+  </label>
+  <br />
+  <button (click)="saveChanges()">Enregistrer</button>
+  <button (click)="cancelEditing()">Annuler</button>
+</div>
           </td>
         </tr>
       </tbody>

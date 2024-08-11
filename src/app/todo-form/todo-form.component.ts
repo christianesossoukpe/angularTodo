@@ -21,7 +21,7 @@ export class TodoFormComponent {
     const todo: Todos = {
       id:Date.now(),
       task: this.FormTodo.value.task || "",
-      status:this.FormTodo.value.task || "",
+      status:this.FormTodo.value.status || "",
     };
     this.TodosService.addTodo(todo);
     this.FormTodo.reset();

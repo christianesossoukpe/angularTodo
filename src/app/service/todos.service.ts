@@ -24,8 +24,8 @@ todos:Todos[] = todos
       this.todos.splice(index,1)
     }
     
-    editeTodo(id:number): void {
-      this.todos.map((todo) => todo.id === id)
-    }
+    // editeTodo(id:number): void {
+    //   this.todos.map((todo) => todo.id === id)
+    // }
 
 }

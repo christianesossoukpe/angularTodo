@@ -29,10 +29,30 @@ export class TodosListComponent implements OnInit {
     console.log(index);
   }
  
-  updatTask(id:number) {
-    this.TodosService.editeTodo(id)
-    console.log(id);
+  // updatTask(id:number) {
+  //   this.TodosService.editeTodo(id)
+  //   console.log(id);
     
+  // }
+  isEditing: boolean = false;
+  originalData = {
+    task: 'Titre initial',
+    status: 'Description initiale'
+  };
+  updatedData = { ...this.originalData };
+
+  startEditing() {
+    this.isEditing = true;
+  }
+
+  saveChanges() {
+    this.originalData = { ...this.updatedData };
+    this.isEditing = false;
+  }
+
+  cancelEditing() {
+    this.updatedData = { ...this.originalData };
+    this.isEditing = false;
   }
 
 }

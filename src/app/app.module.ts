@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { TodosListComponent } from './todos-list/todos-list.component';
 import { TodoFormComponent } from './todo-form/todo-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodosListComponent,
-    TodoFormComponent
+    TodoFormComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
