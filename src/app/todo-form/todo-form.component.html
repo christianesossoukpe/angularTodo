@@ -1,0 +1,24 @@
+<!-- <p>todo-form works!</p> -->
+<!-- Input -->
+
+<div class="d-flex text-cent">
+  <form [formGroup]="FormTodo">
+    <label for="task">Tâches:</label>
+    <input
+      formControlName="task"
+      type="text"
+      placeholder="Entrez votre tâche"
+      class="form-control"
+    />
+    <label for="task">Status:</label>
+    <input
+      formControlName="status"
+      type="text"
+      placeholder="Entrez le status"
+      class="form-control"
+    />
+    <button class="btn btn-warning rounded-0" (click)="addTask()">
+      Ajouter
+    </button>
+  </form>
+</div>
